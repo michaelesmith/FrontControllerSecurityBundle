@@ -34,7 +34,12 @@ class FrontControllerSecurityIPListCommand extends FrontControllerSecurityBase
         foreach($ranges as $id => $range){
             $output->writeln($formatter->formatSection(
                 $id + 1,
-                sprintf("%s - %s expires: %s (%s)", $range->begin, $range->end, $range->expire, $range->note)
+                sprintf("%s - %s expires: %s (%s)",
+                    $range->begin,
+                    $range->end,
+                    ($range->expire && strtotime($range->expire) < time()) ? '<error>'.$range->expire.'</error>' : $range->expire,
+                    $range->note
+                )
             ));
         }
     }
