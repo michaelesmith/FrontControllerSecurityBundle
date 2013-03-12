@@ -5,7 +5,7 @@
     "homepage": "http://michaelsmithonline.blogspot.com/p/front-controller-security-bundle.html",
     "type": "symfony-bundle",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Michael Smith",
@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.3"
     },
     "require-dev": {
         "symfony/finder": ">=2.1.0,<2.3-dev",
