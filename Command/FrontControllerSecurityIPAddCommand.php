@@ -41,6 +41,12 @@ class FrontControllerSecurityIPAddCommand extends FrontControllerSecurityBase
                 InputOption::VALUE_OPTIONAL,
                 'If not set, the task will guess the security file'
             )
+            ->addOption(
+                'create-file',
+                null,
+                InputOption::VALUE_NONE,
+                'If set, the file given will bre created'
+            )
         ;
     }
 
@@ -48,7 +54,7 @@ class FrontControllerSecurityIPAddCommand extends FrontControllerSecurityBase
     {
         $filename = $this->getSecurityFilename($input->getOption('file'));
 
-        $ranges = $this->getCurrentSecurity($filename);
+        $ranges = $this->getCurrentSecurity($filename, $input->getOption('create-file'));
 
         $begin = $input->getArgument('begin');
         if(!ip2long($begin)){

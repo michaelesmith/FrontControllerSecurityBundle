@@ -7,8 +7,17 @@ use Symfony\Component\Finder\Finder;
 
 abstract class FrontControllerSecurityBase extends Command
 {
-    protected function getCurrentSecurity($filename)
+    protected function getCurrentSecurity($filename, $create = false)
     {
+        if(!file_exists($filename)){
+            if($create){
+
+                return array();
+            }else{
+                throw new \InvalidArgumentException(sprintf('file "%s" does not exist', $filename));
+            }
+        }
+
         return json_decode(file_get_contents($filename));
     }
 
