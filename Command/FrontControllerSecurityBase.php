@@ -15,7 +15,6 @@ abstract class FrontControllerSecurityBase extends Command
     protected function putSecurityFile($filename, $ranges)
     {
         $ranges = array_merge($ranges);
-        var_dump($ranges);
 
         file_put_contents($filename, json_encode($ranges, defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PRINT : null));
     }

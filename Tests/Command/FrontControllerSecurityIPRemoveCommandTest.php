@@ -55,8 +55,8 @@ class FrontControllerSecurityIPRemoveCommandTest extends TestCase
     public function providerExecute()
     {
         return array(
-            array('c', array('127.0.0.1', '192.168.1.1')),
-            array('a', array()),
+            array('C', array('127.0.0.1', '192.168.1.1')),
+            array('A', array()),
             array('1', array('192.168.1.1')),
             array('2', array('127.0.0.1')),
         );
