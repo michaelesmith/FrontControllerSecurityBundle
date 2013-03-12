@@ -1,5 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/michaelesmith/FrontControllerSecurityBundle.png)](http://secure.travis-ci.org/michaelesmith/FrontControllerSecurityBundle)
-
+[![Build Status](https://travis-ci.org/michaelesmith/FrontControllerSecurityBundle.png?branch=master)](https://travis-ci.org/michaelesmith/FrontControllerSecurityBundle)
 FrontControllerSecurityBundle
 ======
 
