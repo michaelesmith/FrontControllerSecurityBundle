@@ -1,5 +1,5 @@
 {
-    "name": "ms/front-controller-security-bundle",
+    "name": "michaelesmith/front-controller-security-bundle",
     "description": "Allows for easy ip based security for front controllers in Symfony2",
     "keywords": ["security", "front controller"],
     "homepage": "http://michaelsmithonline.blogspot.com/p/front-controller-security-bundle.html",

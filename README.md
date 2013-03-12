@@ -24,7 +24,7 @@ Just create a `composer.json` file for your project:
 ``` json
 {
     "require": {
-        "michaelesmith/datetime": "*"
+        "michaelesmith/front-controller-security-bundle": "dev-master"
     }
 }
 ```
