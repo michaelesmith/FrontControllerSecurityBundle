@@ -1,6 +1,6 @@
 <?php
 
-namespace MS\Bundle\DevelopmentSecurityBundle;
+namespace MS\Bundle\FrontControllerSecurityBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
