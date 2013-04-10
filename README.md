@@ -31,6 +31,15 @@ Just create a `composer.json` file for your project:
 
 For more info on composer see https://github.com/composer/composer
 
+If you want to be able to use the provided cli tasks to view, add and remove ips you need to enable the bundle in your AppKernel.php
+
+``` php
+        if ('dev' == $this->getEnvironment()) {
+            $bundles[] = new MS\Bundle\FrontControllerSecurityBundle\MSFrontControllerSecurityBundle();
+        }
+
+````
+
 Usage
 ---------------
 
