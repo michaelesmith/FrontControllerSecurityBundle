@@ -12,7 +12,7 @@ Installation
 
 ### Use Composer (*recommended*)
 
-The recommended way to install the FrontControllerSecurityBundlee is through composer.
+The recommended way to install the FrontControllerSecurityBundle is through composer.
 
 If you don't have Composer yet, download it following the instructions on
 http://getcomposer.org/ or just run the following command:
