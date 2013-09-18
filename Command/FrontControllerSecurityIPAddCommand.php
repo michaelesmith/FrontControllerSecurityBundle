@@ -17,7 +17,7 @@ class FrontControllerSecurityIPAddCommand extends FrontControllerSecurityBase
             ->setDescription('Add ip to the security .json file')
             ->addArgument(
                 'begin',
-                InputArgument::REQUIRED,
+                InputArgument::OPTIONAL,
                 'Beginning ip of range'
             )
             ->addArgument(
@@ -57,6 +57,22 @@ class FrontControllerSecurityIPAddCommand extends FrontControllerSecurityBase
         $ranges = $this->getCurrentSecurity($filename, $input->getOption('create-file'));
 
         $begin = $input->getArgument('begin');
+
+        if(!$begin && $_SERVER['SSH_CONNECTION']){
+            $dialog = $this->getHelperSet()->get('dialog');
+            $sshIp = substr($_SERVER['SSH_CONNECTION'], 0, strpos($_SERVER['SSH_CONNECTION'], ' '));
+            if (!$dialog->askConfirmation(
+                $output,
+                sprintf('<question>Would like to use your current ip of "%s"</question>', $sshIp),
+                true
+            )) {
+
+                return;
+            }
+
+            $begin = $sshIp;
+        }
+
         if(!ip2long($begin)){
             throw new \InvalidArgumentException(sprintf('"%s" is not a valid ip for begin', $begin));
         }
