@@ -33,7 +33,7 @@ class FrontControllerSecurityIPAddCommand extends FrontControllerSecurityBase
             ->addArgument(
                 'note',
                 InputArgument::OPTIONAL,
-                'Ending ip of range'
+                'Note for the ip range'
             )
             ->addOption(
                 'file',
